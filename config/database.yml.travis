@@ -27,8 +27,7 @@ development:
   encoding: unicode
   database: travis_ci_development
   pool: 5
-  username: appv2
-  password: password1
+  username: postgresql
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -66,8 +65,7 @@ test:
   encoding: unicode
   database: travis_ci_test
   pool: 5
-  username: appv2
-  password: password1
+  username: postgres
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -92,5 +90,5 @@ test:
 production:
   <<: *default
   database: travis_ci_production
-  username: appv2
+  username: postgres
   password: <%= ENV['APPV2_DATABASE_PASSWORD'] %>
