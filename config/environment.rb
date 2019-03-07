@@ -4,4 +4,3 @@ require_relative 'application'
 
 # Initialize the Rails application.
 Rails.application.initialize!
-config.active_record.migration_error = false#:page_load
