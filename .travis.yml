@@ -16,3 +16,7 @@ before_script:
 
 services:
   - postgresql
+
+deploy:
+  provider: heroku
+  api_key: 107f3e82-735e-4528-bf8b-76681a23a9c1
