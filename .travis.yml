@@ -9,6 +9,7 @@ before_install:
   - gem install bundler
 
 before_script:
+  - bin/rails db:migrate RAILS_ENV=test
   - psql -c 'create database travis_ci_test;' -U postgres
   - psql -c "CREATE USER appv2 WITH PASSWORD 'password1';" -U postgres
   - cp config/database.yml.travis config/database.yml
