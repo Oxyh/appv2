@@ -12,6 +12,7 @@ before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - psql -c "CREATE USER appv2 WITH PASSWORD 'password1';" -U postgres
   - cp config/database.yml.travis config/database.yml
+  - rake db:migrate
 
 services:
   - postgresql
