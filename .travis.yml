@@ -1,25 +1,20 @@
 language: ruby
 rvm:
 - 2.6.1
-
-
-
 before_install:
-  - gem update --system
-  - gem install bundler
-
+- gem update --system
+- gem install bundler
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-  - psql -c "CREATE USER appv2 WITH PASSWORD 'password1';" -U postgres
-  - cp config/database.yml.travis config/database.yml
-  - rake db:migrate
-
+- psql -c 'create database travis_ci_test;' -U postgres
+- psql -c "CREATE USER appv2 WITH PASSWORD 'password1';" -U postgres
+- cp config/database.yml.travis config/database.yml
+- rake db:migrate
 services:
-  - postgresql
-
+- postgresql
 deploy:
   provider: heroku
-  api_key: 06f900f2-7166-4578-a21a-638f4d506981
+  api_key:
+    secure: XcEIFO2bmVBil7pV9GdQLlggLf4yzojGd7OKVEr6oRYIVPiON8Hks1xVP7wr/P4hChHSpWfJ8CccC1GVjJgd6JNlsxKSccH+9mUqPTu+Rx9sGw2HszuqXCkHQlFWuV10Svs02IkeGNYzXmE85XfHv/64v4V77BJB94P6MYUc7IWL5t9aIomPSobDZ28CtvB9Qx1E791f3i3LUlgAPUD4ixryUWRQI3jZa6+MxkoYYPms+eX1svWpdlO3jPWuPpnRyJt2QuLNjve2bL3QQezF5g/MBh0+4u9xXJ1j83793W4+eEG8mhO22NKakCF8RwpVBU1tadisGHyQLwiu7kD25X6MuzX8Iu6h3/nH/R6VL/OdKzQrPgxlOJPpl9lvAkytOx/fjXUjiVVyQf2n5cMtlp5rmHReld2U/hn+NfXmeDjdQ6KUaXHJTtczhZzDignLNVaexJcChHYUuWB6udtKDcWRy7OZX1ftI+hVE771AY9686MFH5tjPMjP9yVEUiebqqpwyXRjztoloxujkGYoWvjOLKgQUR8PKjVBKNzdOcvGmVO4TvKWm4NcblskU0zgNtE//ZMOEBx826Blv7qMj+ScD6nOFQHwGboSXeiYGcPg5GZOc/3jbhOMb47yemHnx5InjzGa3wn8nvGxKq60VBD1OsZ3PRMRoMYgw6cNbdE=
   app:
     master: appv2
     production: appv2
