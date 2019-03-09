@@ -15,6 +15,7 @@ deploy:
   provider: heroku
   api_key:
     secure: lYgcN4fvpbfFAaDG+YCEa4i7HHXHjX8UT2Bbo/2KczbufgrquDnqiftVB3j+D8qDKzMrvOzpZ+B87W0TD/JwYrsT8k20d8iqp7pO14+ftOn14f/rUN/TGUVu69JRYXuSir5lOam6ww0WaLJ4E5r/qqnYHHPAvpEXMwMMReF+l4a/aL1T49aWLQD2YTsN+bwkMi+q4ptHbOqolqTTx+uEv9SfKMjzCwT4YuYaTwtnvx1xBGJwCwstY4mdsP4jq+3wBRbVJNrZk/9ZmLYpdPq7EbbsEziI7U1UzCx7aq6V86z/+zDy8ItXSq2Sl2Fqk0O3RVyut6TzYJSK0pgfGAZTYVyIlizyfENcahKJqrEpUTXiDkJjEm294Od/w5KyenvSvKqNmKXKGUCDay8MYvyxhWSzZ+cpBpTyOeT6fhxaDTPEsoBp+QID7DoKxO2iVdbEVsotszKZPCpmVD2xwb6tQILm9G5uL2csIofRxeFYmZQ6NTGgsI3Rwce+iQWGJsndYTn36DyzZ5r7smZ750B291fFqBHvb/vzsMzuGsDRaAWQ80dH4sqZbRvq5s5Ekg8lqZauAMvI6Al8sz3DK+e5ZKgwRAkPneyhNXi5aBN8fwZfhmDeVnsMKpLKQB/y67ciMdT/ATfEEzZ47cA4aKYbNYZMqdh0LEoQz+S7WGfjZvU=
+  run: "rake db:migrate"
   app: appv2
   on:
     repo: Oxyh/aapv2
