@@ -19,8 +19,7 @@
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.prix %></td>
-        <td><%= product.image %></td>
-        <td><img src=<%= product.image %> style="width:300px"></td>
+        <td><img src=<%=product.image %> style="width:10%;height:10%;margin-left:auto;margin-right:auto;display:block;" /></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
