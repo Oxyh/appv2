@@ -15,5 +15,5 @@ two:
 three:
   name: other
   description: MyStriproductng
-  price: 1.5
-  picture: MyString
+  prix: 1.5
+  image: MyString
